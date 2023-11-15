@@ -1,0 +1,84 @@
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block title %}
+Ultimate Service Provider - Home
+{% endblock %}
+
+
+{% block slideshow %}
+
+<div class="home-slideshow-div">
+
+  <div class="slideshow-wrapper">
+
+    <button class='back-slideshow-btn'>
+      <i class="fa-solid fa-chevron-left slideshow-icon"></i>
+    </button>
+
+    <img class="slideshow-img" src="{% static 'main/pics/logos/USP_blackish_green.png' %}" alt="slideshow-pic">
+
+    <button class='forward-slideshow-btn'>
+      <i class="fa-solid fa-chevron-right slideshow-icon"></i>
+    </button>
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block body %}
+<section class="section-1">
+  <div class="services-div">
+    <h3 class="services-header">Services</h3>
+
+    <article class=' services pic-on-right'>
+      <div class="services-text">
+        <h3>Painting & Installation</h3>
+        <p>If you're looking for installation or painting, we have experience in both private homes and businesses.</p>
+      </div>
+
+        <img src="{% static 'main/pics/services/tile_shower.jpg' %}" alt="tools-pic">
+
+
+    </article>
+
+    <article class='services pic-on-left'>
+      <div class='services-text'>
+        <h3>Repair & Remodeling</h3>
+        <p>Have you gone as far as your knowledge will take you on a project? For anything your home might need, we have you covered. Call for a free consultation!</p>
+      </div>
+
+        <img src="{% static 'main/pics/services/nailing.webp' %}" alt="nailing-cabinet">
+
+
+    </article>
+
+    <article class='services pic-on-right'>
+      <div class="services-text">
+        <h3>Maintenance & Home Services</h3>
+        <p>Don't risk further damage to your home by letting maintenance fall by the wayside. Let us save you time take care of your honey-do list! </p>
+      </div>
+
+        <img src="{% static 'main/pics/services/USP_deck.webp' %}" alt="back-deck">
+
+
+    </article>
+
+  </div>
+</section>
+
+<section class='section-2'>
+  <div class='reviews-div'>
+    <div class="elfsight-app-f538f614-9366-43ef-9fa3-1a4333d9ac5f reviews" data-elfsight-app-lazy></div>
+  </div>
+</section>
+
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<script type="text/javascript" src="{% static 'main/slideshow.js' %}" ></script>
+
+{% endblock %}
+
+

@@ -1,0 +1,1 @@
+web: gunicorn USP_backend.wsgi --logfile -

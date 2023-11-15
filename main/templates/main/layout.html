@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type='image/x-icon' href="{% static 'main/pics/logos/USP_navyblue_white.png'%}">
+  <script src="https://kit.fontawesome.com/d37105f83f.js" crossorigin="anonymous"></script>
+  <script src="{% static '/main/dropdown.js' %}" defer></script>
+  <link href="{% static 'main/styles.css' %}" rel="stylesheet">
+
+  <!-- FONTS -->
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+  </style> 
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+  </style> 
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+  </style> 
+
+
+  <title>
+    {% block title %}
+    {% endblock %}
+  </title>
+</head>
+<body>
+
+  <div id="opaque"></div>
+
+  <nav>
+
+    <div class="nav-div">
+      <div class="brand-header-div">
+      
+
+      <div class="nav-logo-wrapper">
+        <a href="/">
+          <img src="{% static 'main/pics/logos/USP_navyblue_white.png' %}" alt="company logo">
+        </a>
+        <h1>ULTIMATE SERVICE PROVIDER</h1>
+
+      <div class='menu-btn'>
+        <div class="menu-btn-burger">
+        </div>
+      </div>
+
+      </div>
+
+
+      </div>
+
+      <div class="nav-links-large">
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+      </div>
+
+      <div class="nav-links-burger">
+        <img src="{% static 'main/pics/McKay.FH_NewEnglandVillage.jpg' %}" alt="art">
+        <div class='links-inner'>
+          <a href="/">Home</a>
+          <a href="{% url 'about' %}">About Us</a>
+          <a href="{% url 'contact' %}">Contact Us</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    {% block slideshow %}
+
+    {% endblock %}
+
+
+  </nav>
+
+  {% block body %}
+  {% endblock %}
+
+
+  {% block footer %}
+
+  <section class="section-footer">
+    <div class='footer-div'>
+      <div class='footer-links'>
+        <a class="fb-link footer-link" href="https://www.facebook.com/people/Ultimate-Service-Provider/100067025161981/">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a class='home-advisor-link footer-link' href="https://www.homeadvisor.com/rated.UltimateServiceProvider.109841380.html">
+          <img src="{% static 'main/pics/logos/home_advisor_logo.png' %}" alt="">
+        </a>
+        <a class="insta-link footer-link" href="https://www.instagram.com/ultimate_service_provider/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <div class="footer-contact-info">
+        <p>508-918-6341</p>
+        <p>PO Box 643 Franklin, MA 02038</p>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
+
+</body>
+</html>
